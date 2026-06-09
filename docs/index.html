@@ -1,20 +1,330 @@
 <!DOCTYPE html>
-<html lang="es"> 
-    <head>
-        <Title>
-            Mi primera página web
-        </Title>
-       <body id="site-body" class="pc">
-        <h1> 
-            Cabecera más grande
-        </h1>
-        <p>
-            Hola, soy un párrafo
-        </p>
-        <p>
-            Soy otro párrafo
-        </p>
-       </body>
-    </head>
-    
+<html lang="es">
+ 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Josefa" />
+  <meta name="description" content="Crónica sobre el retroceso glaciar en Chile y su impacto en la disponibilidad de agua dulce, basada en datos del Inventario Público de Glaciares 2022 de la DGA." />
+  <title>El hielo que se va — Deshielo glaciar en Chile</title>
+ 
+  <style>
+    body {
+      font-family: Georgia, serif;
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background-color: #f7f5f0;
+      margin: 0;
+      padding: 0;
+    }
+ 
+    header {
+      background-color: #1b3a4b;
+      color: #ffffff;
+      padding: 3rem 2rem 2rem;
+      text-align: center;
+    }
+ 
+    header h1 {
+      font-size: 2.4rem;
+      margin: 0 0 0.5rem;
+    }
+ 
+    header p.bajada {
+      font-size: 1.1rem;
+      color: #a8d5e2;
+      margin: 0;
+    }
+ 
+    nav {
+      background-color: #132d3c;
+      padding: 0.6rem 2rem;
+      text-align: center;
+    }
+ 
+    nav a {
+      color: #a8d5e2;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+ 
+    nav a:hover {
+      text-decoration: underline;
+    }
+ 
+    main {
+      max-width: 760px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+ 
+    h2 {
+      font-size: 1.5rem;
+      color: #1b3a4b;
+      border-bottom: 2px solid #a8d5e2;
+      padding-bottom: 0.3rem;
+      margin-top: 2.5rem;
+    }
+ 
+    h3 {
+      font-size: 1.1rem;
+      color: #1b3a4b;
+      margin-bottom: 0.4rem;
+    }
+ 
+    .datos-clave {
+      background-color: #ddeef5;
+      border-left: 5px solid #1b3a4b;
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 6px 6px 0;
+    }
+ 
+    .datos-clave ul {
+      margin: 0.5rem 0 0;
+      padding-left: 1.2rem;
+    }
+ 
+    .datos-clave li {
+      margin-bottom: 0.4rem;
+    }
+ 
+    .visualizacion {
+      margin: 2rem 0;
+      text-align: center;
+    }
+ 
+    .visualizacion img {
+      max-width: 100%;
+      border: 2px solid #c0d8e4;
+      border-radius: 4px;
+    }
+ 
+    .visualizacion figcaption {
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+ 
+    blockquote {
+      border-left: 4px solid #1b3a4b;
+      margin: 1.5rem 0;
+      padding: 0.8rem 1.2rem;
+      background-color: #eaf4f8;
+      font-style: italic;
+      color: #333;
+    }
+ 
+    .fuentes {
+      background-color: #efefef;
+      padding: 1.2rem 1.5rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+    }
+ 
+    .fuentes ol {
+      padding-left: 1.4rem;
+      margin: 0.5rem 0 0;
+    }
+ 
+    .fuentes li {
+      margin-bottom: 0.4rem;
+      font-size: 0.9rem;
+    }
+ 
+    footer {
+      background-color: #1b3a4b;
+      color: #a8d5e2;
+      text-align: center;
+      padding: 1.5rem;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      margin-top: 3rem;
+    }
+ 
+    footer a {
+      color: #a8d5e2;
+    }
+  </style>
+</head>
+ 
+<body>
+ 
+  <header>
+    <h1>El hielo que se va</h1>
+    <p class="bajada">Cómo Chile está perdiendo sus glaciares — y con ellos, el agua del futuro</p>
+  </header>
+ 
+  <nav>
+    <a href="#cronica">Crónica</a>
+    <a href="#datos">Datos</a>
+    <a href="#visualizacion">Visualización</a>
+    <a href="#fuentes">Fuentes</a>
+  </nav>
+ 
+  <main>
+ 
+    <div id="cronica">
+      <h2>La paradoja del país del hielo</h2>
+ 
+      <p>
+        Chile es uno de los países con más agua congelada del mundo. Sus glaciares representan aproximadamente el
+        <strong>80% de los glaciares de toda Sudamérica</strong>, una cifra que suena a abundancia. Pero ese hielo
+        se está derritiendo, y lo está haciendo más rápido de lo que cualquier modelo climático anticipaba hace
+        apenas dos décadas.
+      </p>
+ 
+      <p>
+        Cuando escucho hablar de glaciares, imagino algo permanente. Masas de hielo que llevan miles de años
+        ahí, indiferentes al tiempo. Pero los datos cuentan otra historia. El Inventario Público de Glaciares
+        (IPG) de la Dirección General de Aguas registró en 2022 un total de <strong>26.180 glaciares</strong>
+        en territorio nacional, con una superficie total de <strong>21.012 km²</strong>. Comparado con el
+        inventario de 2014 —que medía 22.796 km²— la pérdida es de casi <strong>1.800 km²</strong>: un 8%
+        del total en apenas ocho años.
+      </p>
+ 
+      <p>
+        No es un porcentaje que impresione a primera vista. Pero detrás de ese número hay ecosistemas
+        fragmentados, cuencas que pierden su regulación hídrica y comunidades que ya empiezan a sentir que
+        el agua escasea. El volumen de hielo estimado en el IPG 2022 es de <strong>3.026 km³</strong>,
+        equivalente a <strong>2.573 km³ de agua</strong>. Una reserva enorme, pero que lleva años reduciéndose.
+      </p>
+    </div>
+ 
+    <div id="datos" class="datos-clave">
+      <h3>Datos clave: Inventario Público de Glaciares 2022 (DGA)</h3>
+      <ul>
+        <li>Chile concentra ~80% de los glaciares de Sudamérica</li>
+        <li><strong>26.180 glaciares</strong> registrados en el inventario 2022</li>
+        <li>Superficie total: <strong>21.012 km²</strong> (vs. 22.796 km² en 2014)</li>
+        <li>Pérdida de superficie: <strong>~8%</strong> entre 2014 y 2022</li>
+        <li>Volumen de hielo estimado: <strong>3.026 km³</strong> (equiv. a 2.573 km³ de agua)</li>
+        <li>Región con más hielo: <strong>Magallanes</strong> (10.427 km²)</li>
+        <li>La <strong>Macrozona Austral</strong> concentra el 89% de la superficie glaciar del país</li>
+        <li>En épocas de sequía, los glaciares aportan cerca del <strong>70% del agua</strong> consumida en algunas zonas</li>
+      </ul>
+    </div>
+ 
+    <p>
+      La distribución del hielo en Chile no es pareja. Como muestra la visualización más abajo, la
+      <strong>Macrozona Austral</strong> concentra 18.687 km² de los 21.012 km² totales: casi el 89%
+      del hielo del país está en el extremo sur. Pero la crisis hídrica no golpea en el sur, donde
+      llueve y hay agua de sobra. Golpea en el centro y el norte, precisamente donde los glaciares son
+      más pequeños, más frágiles y más necesarios.
+    </p>
+ 
+    <p>
+      La <strong>Macrozona Centro</strong> —que incluye la Región Metropolitana y las regiones vecinas—
+      tiene apenas 911 km² de superficie glaciar. Es la zona más poblada del país y la que más
+      depende del agua de montaña. En épocas de sequía, cuando no hay nieve ni lluvia, el deshielo es
+      la única fuente que mantiene vivos a los ríos.
+    </p>
+ 
+    <blockquote>
+      "Glaciares que tardaron miles de años en formarse se han fragmentado y retrocedido en cuestión de años."
+      — Angloamerican, sobre el ritmo de deshielo desde el año 2000.
+    </blockquote>
+ 
+    <p>
+      El tipo de glaciar también importa. El IPG 2022 clasifica los cuerpos de hielo siguiendo la norma
+      UNESCO: la categoría más numerosa es el <strong>glaciarete</strong>, con 18.211 unidades. Son los
+      más pequeños y también los más vulnerables al calentamiento. Los glaciares de montaña suman 3.844,
+      y los glaciares rocosos —cubiertos por detritos— son 3.598. Cada tipo responde de forma distinta
+      al cambio de temperatura, pero todos comparten la misma tendencia: están retrocediendo.
+    </p>
+ 
+    <div id="visualizacion" class="visualizacion">
+      <figure>
+        <img
+          src="vis_01.jpg"
+          alt="Gráfico de barras horizontales que muestra la superficie glaciar total por macrozona en Chile. La Macrozona Austral domina con cerca de 18.700 km², seguida muy por debajo por las macrozonas Sur, Centro y Norte."
+        />
+        <figcaption>
+          <strong>Superficie glaciar por macrozona en Chile</strong> — Elaboración propia a partir del
+          Inventario Público de Glaciares 2022 (DGA, MOP). La desproporción entre la Macrozona Austral
+          y el resto del país refleja dónde está el hielo, no necesariamente dónde más se necesita.
+        </figcaption>
+      </figure>
+    </div>
+ 
+    <p>
+      El gráfico lo dice con claridad: el hielo está en el sur, pero la sed está en el centro. Esa
+      distancia geográfica entre la reserva y la necesidad es parte del problema. Los glaciares de la
+      zona central no solo son pequeños, sino que además están sometidos a las temperaturas más altas
+      del ciclo anual y a una megasequía que lleva más de una década instalada en Chile central.
+    </p>
+ 
+    <h2>¿Qué podemos hacer con esta información?</h2>
+ 
+    <p>
+      La historia de los glaciares chilenos no termina en un gráfico. Termina —o debería empezar— en
+      política pública, en regulación, en decisiones concretas sobre cómo protegemos lo que queda.
+      Chile lleva años debatiendo una ley de glaciares que aún no existe. Mientras tanto, el hielo
+      sigue su camino.
+    </p>
+ 
+    <p>
+      Este proyecto es una primera aproximación a esa historia. Usamos los datos del IPG 2022 para
+      mostrar dónde estamos parados. Lo que sigue es entender, con más detalle, qué regiones están
+      en mayor riesgo y qué comunidades ya están sintiendo las consecuencias.
+    </p>
+ 
+    <h2>Preguntas que guían esta investigación</h2>
+ 
+    <ol>
+      <li>¿Cuánto han disminuido los glaciares en Chile en los últimos años?</li>
+      <li>¿Qué zonas del país están más afectadas?</li>
+      <li>¿Cómo se relaciona el deshielo con la crisis hídrica?</li>
+      <li>¿Qué regiones dependen más del agua proveniente de glaciares?</li>
+      <li>¿Qué podría pasar si esta tendencia continúa?</li>
+    </ol>
+ 
+    <div id="fuentes" class="fuentes">
+      <h2>Fuentes</h2>
+      <ol>
+        <li>
+          Dirección General de Aguas (DGA) — Inventario Público de Glaciares 2022:
+          <a href="https://dga.mop.gob.cl/inventario-publico-de-glaciares-actualizacion-2022/" target="_blank" rel="noopener">
+            dga.mop.gob.cl
+          </a>
+        </li>
+        <li>
+          Fundación Glaciares Chilenos — Análisis del IPG 2022:
+          <a href="https://www.glaciareschilenos.org/reportajes/glaciares-chilenos-en-evolucion-analisis-del-inventario-publico-de-glaciares-2022/" target="_blank" rel="noopener">
+            glaciareschilenos.org
+          </a>
+        </li>
+        <li>
+          Portal Agro Chile — Nota oficial DGA:
+          <a href="https://www.portalagrochile.cl/2022/06/16/direccion-general-de-aguas-del-mop-registro-26-169-glaciares-en-su-inventario-publico-2022/" target="_blank" rel="noopener">
+            portalagrochile.cl
+          </a>
+        </li>
+        <li>
+          Wikipedia — Inventario Público de Glaciares de Chile 2022:
+          <a href="https://es.wikipedia.org/wiki/Inventario_p%C3%BAblico_de_glaciares_de_Chile_2022" target="_blank" rel="noopener">
+            es.wikipedia.org
+          </a>
+        </li>
+      </ol>
+    </div>
+ 
+  </main>
+ 
+  <footer>
+    <p>
+      Pieza narrativa individual · Proyecto Deshielo Glaciar en Chile ·
+      Periodismo de Datos, Universidad Católica de Chile
+    </p>
+    <p>
+      Parte de la webstory grupal —
+      <a href="../index.html">volver al inicio</a>
+    </p>
+  </footer>
+ 
+</body>
 </html>
