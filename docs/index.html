@@ -6,9 +6,9 @@
   <meta name="author" content="Josefa" />
   <meta name="description" content="El deshielo glaciar en Chile: una historia de pérdida narrada con datos del IPG 2022 y la voz de Shoan, el huemul." />
   <title>El hielo que se va — Glaciares en Chile</title>
- 
+
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,700&family=DM+Mono:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
- 
+
   <style>
     :root {
       --blanco-hielo: #F0F8FF;
@@ -20,11 +20,11 @@
       --calido:       #E8C547;
       --texto:        #1a2a3a;
     }
- 
+
     * { box-sizing: border-box; margin: 0; padding: 0; }
- 
+
     html { scroll-behavior: smooth; }
- 
+
     body {
       font-family: 'Inter', sans-serif;
       background: var(--blanco-hielo);
@@ -44,7 +44,7 @@
       );
       background-attachment: fixed;
     }
- 
+
     /* ══════════════════════════════
        HERO
     ══════════════════════════════ */
@@ -58,7 +58,7 @@
       padding: 4rem 2rem 6rem;
       position: relative;
     }
- 
+
     .hero-kicker {
       font-family: 'DM Mono', monospace;
       font-size: 0.72rem;
@@ -67,7 +67,7 @@
       color: var(--azul-medio);
       margin-bottom: 1.5rem;
     }
- 
+
     .hero h1 {
       font-family: 'Fraunces', serif;
       font-size: clamp(3rem, 9vw, 6.5rem);
@@ -76,13 +76,13 @@
       color: var(--azul-profundo);
       margin-bottom: 1.4rem;
     }
- 
+
     .hero h1 .italica {
       font-style: italic;
       color: var(--azul-medio);
       display: block;
     }
- 
+
     .hero-bajada {
       font-family: 'Fraunces', serif;
       font-style: italic;
@@ -92,7 +92,7 @@
       margin: 0 auto 2.5rem;
       opacity: 0.75;
     }
- 
+
     /* TERMÓMETRO */
     .termometro-wrap {
       display: flex;
@@ -101,7 +101,7 @@
       justify-content: center;
       margin: 2rem auto 0;
     }
- 
+
     .termometro {
       width: 28px;
       height: 140px;
@@ -111,7 +111,7 @@
       position: relative;
       overflow: hidden;
     }
- 
+
     .termometro-fill {
       position: absolute;
       bottom: 0;
@@ -121,12 +121,12 @@
       border-radius: 0;
       animation: subir 3s ease-out forwards;
     }
- 
+
     @keyframes subir {
       from { height: 20%; }
       to   { height: 82%; }
     }
- 
+
     .termometro-bola {
       width: 28px;
       height: 28px;
@@ -136,12 +136,12 @@
       margin-top: -2px;
       animation: calentarbola 3s ease-out forwards;
     }
- 
+
     @keyframes calentarbola {
       from { background: #7EC8C8; }
       to   { background: #E8C547; }
     }
- 
+
     .termometro-label {
       font-family: 'DM Mono', monospace;
       font-size: 0.72rem;
@@ -149,14 +149,14 @@
       text-align: left;
       line-height: 1.5;
     }
- 
+
     .termometro-label span {
       display: block;
       font-size: 1.4rem;
       font-weight: 500;
       color: #c0392b;
     }
- 
+
     /* flecha scroll */
     .scroll-hint {
       position: absolute;
@@ -174,17 +174,17 @@
       gap: 0.4rem;
       animation: flotar 2s ease-in-out infinite;
     }
- 
+
     @keyframes flotar {
       0%, 100% { transform: translateX(-50%) translateY(0); }
       50%       { transform: translateX(-50%) translateY(6px); }
     }
- 
+
     .scroll-hint::after {
       content: "↓";
       font-size: 1.2rem;
     }
- 
+
     /* ══════════════════════════════
        NAV
     ══════════════════════════════ */
@@ -201,7 +201,7 @@
       gap: 0.2rem;
       border-bottom: 1px solid rgba(126,200,200,0.2);
     }
- 
+
     nav a {
       color: var(--acento);
       text-decoration: none;
@@ -214,12 +214,12 @@
       border-radius: 2px;
       transition: all 0.2s;
     }
- 
+
     nav a:hover {
       border-color: var(--acento);
       color: white;
     }
- 
+
     /* ══════════════════════════════
        MAIN
     ══════════════════════════════ */
@@ -228,14 +228,14 @@
       margin: 0 auto;
       padding: 0 1.5rem 6rem;
     }
- 
+
     /* ══════════════════════════════
        SECCIÓN GENÉRICA
     ══════════════════════════════ */
     .seccion {
       padding: 5rem 0 2rem;
     }
- 
+
     .eyebrow {
       font-family: 'DM Mono', monospace;
       font-size: 0.68rem;
@@ -245,7 +245,7 @@
       display: block;
       margin-bottom: 0.6rem;
     }
- 
+
     h2 {
       font-family: 'Fraunces', serif;
       font-size: clamp(1.8rem, 4vw, 2.8rem);
@@ -254,20 +254,20 @@
       color: white;
       margin-bottom: 1.2rem;
     }
- 
+
     h2 em {
       font-style: italic;
       color: var(--acento);
     }
- 
+
     p {
       color: rgba(255,255,255,0.82);
       margin-bottom: 1rem;
       font-size: 1rem;
     }
- 
+
     p strong { color: white; }
- 
+
     /* ══════════════════════════════
        TARJETAS DATO
     ══════════════════════════════ */
@@ -281,14 +281,14 @@
       border-radius: 10px;
       overflow: hidden;
     }
- 
+
     .dato-card {
       background: rgba(13,27,42,0.7);
       padding: 1.5rem 1rem;
       text-align: center;
       backdrop-filter: blur(4px);
     }
- 
+
     .dato-card .num {
       font-family: 'Fraunces', serif;
       font-size: 2.6rem;
@@ -297,7 +297,7 @@
       line-height: 1;
       display: block;
     }
- 
+
     .dato-card .lbl {
       font-family: 'DM Mono', monospace;
       font-size: 0.65rem;
@@ -307,7 +307,7 @@
       margin-top: 0.4rem;
       line-height: 1.4;
     }
- 
+
     /* ══════════════════════════════
        SHOAN + GLOBO
     ══════════════════════════════ */
@@ -317,19 +317,19 @@
       gap: 1.5rem;
       margin: 3rem 0;
     }
- 
+
     .shoan-escena.flip { flex-direction: row-reverse; }
- 
+
     .shoan-figura {
       width: 140px;
       flex-shrink: 0;
     }
- 
+
     .shoan-figura img {
       width: 100%;
       filter: drop-shadow(0 6px 20px rgba(0,0,0,0.4));
     }
- 
+
     .shoan-globo {
       flex: 1;
       background: rgba(255,255,255,0.96);
@@ -339,16 +339,16 @@
       border: 2px solid rgba(26,58,92,0.3);
       box-shadow: 0 4px 24px rgba(0,0,0,0.15);
     }
- 
+
     .shoan-globo p {
       color: var(--texto);
       margin: 0;
       font-size: 0.95rem;
     }
- 
+
     .shoan-globo p + p { margin-top: 0.5rem; }
     .shoan-globo strong { color: var(--azul-profundo); }
- 
+
     /* cola izquierda */
     .shoan-globo::before {
       content: "";
@@ -364,7 +364,7 @@
       border: 7px solid transparent;
       border-right-color: rgba(255,255,255,0.96);
     }
- 
+
     /* cola derecha */
     .shoan-escena.flip .shoan-globo::before {
       left: auto; right: -18px;
@@ -376,7 +376,7 @@
       border-right-color: transparent;
       border-left-color: rgba(255,255,255,0.96);
     }
- 
+
     /* dato dentro del globo */
     .shoan-globo .mini-dato {
       display: inline-block;
@@ -390,7 +390,7 @@
       border-radius: 6px;
       line-height: 1.2;
     }
- 
+
     .shoan-globo .mini-label {
       display: block;
       font-family: 'DM Mono', monospace;
@@ -400,7 +400,7 @@
       letter-spacing: 0.1em;
       margin-top: 0.2rem;
     }
- 
+
     /* ══════════════════════════════
        BLOCKQUOTE
     ══════════════════════════════ */
@@ -411,7 +411,7 @@
       background: rgba(255,255,255,0.06);
       border-radius: 0 8px 8px 0;
     }
- 
+
     blockquote p {
       font-family: 'Fraunces', serif;
       font-style: italic;
@@ -420,7 +420,7 @@
       opacity: 1;
       margin: 0;
     }
- 
+
     /* ══════════════════════════════
        VISUALIZACIÓN
     ══════════════════════════════ */
@@ -431,12 +431,12 @@
       border: 1px solid rgba(126,200,200,0.25);
       box-shadow: 0 8px 40px rgba(0,0,0,0.3);
     }
- 
+
     .vis-wrap img {
       width: 100%;
       display: block;
     }
- 
+
     .vis-caption {
       background: rgba(13,27,42,0.85);
       padding: 0.8rem 1.2rem;
@@ -446,7 +446,7 @@
       line-height: 1.5;
       letter-spacing: 0.03em;
     }
- 
+
     /* ══════════════════════════════
        PREGUNTAS
     ══════════════════════════════ */
@@ -455,7 +455,7 @@
       padding: 0;
       margin: 1.5rem 0;
     }
- 
+
     .preguntas li {
       display: flex;
       gap: 1rem;
@@ -465,7 +465,7 @@
       color: rgba(255,255,255,0.8);
       font-size: 0.95rem;
     }
- 
+
     .preguntas li .q-num {
       font-family: 'Fraunces', serif;
       font-size: 1.4rem;
@@ -474,7 +474,7 @@
       line-height: 1.2;
       min-width: 28px;
     }
- 
+
     /* ══════════════════════════════
        FUENTES
     ══════════════════════════════ */
@@ -485,25 +485,25 @@
       padding: 1.6rem 1.8rem;
       margin-top: 3rem;
     }
- 
+
     .fuentes-box ol {
       padding-left: 1.2rem;
       margin-top: 0.8rem;
     }
- 
+
     .fuentes-box li {
       font-size: 0.85rem;
       color: rgba(255,255,255,0.5);
       margin-bottom: 0.5rem;
     }
- 
+
     .fuentes-box a {
       color: var(--acento);
       text-decoration: none;
     }
- 
+
     .fuentes-box a:hover { text-decoration: underline; }
- 
+
     /* ══════════════════════════════
        FOOTER
     ══════════════════════════════ */
@@ -519,9 +519,9 @@
       line-height: 2.2;
       text-transform: uppercase;
     }
- 
+
     footer a { color: var(--acento); text-decoration: none; }
- 
+
     /* ══════════════════════════════
        RESPONSIVE
     ══════════════════════════════ */
@@ -539,7 +539,7 @@
   </style>
 </head>
 <body>
- 
+
   <!-- ══ HERO ══ -->
   <section class="hero">
     <p class="hero-kicker">Periodismo de Datos · IPG 2022 · Universidad Católica de Chile</p>
@@ -548,7 +548,7 @@
       <span class="italica">que se va</span>
     </h1>
     <p class="hero-bajada">Chile tiene el 80% de los glaciares de Sudamérica. Y los está perdiendo.</p>
- 
+
     <div class="termometro-wrap">
       <div style="display:flex; flex-direction:column; align-items:center; gap:0;">
         <div class="termometro">
@@ -561,10 +561,10 @@
         aumento de temperatura<br>en la zona central<br>en los últimos 50 años
       </div>
     </div>
- 
+
     <div class="scroll-hint">sigue leyendo</div>
   </section>
- 
+
   <!-- ══ NAV ══ -->
   <nav>
     <a href="#cronica">Historia</a>
@@ -573,21 +573,21 @@
     <a href="#preguntas">Investigación</a>
     <a href="#fuentes">Fuentes</a>
   </nav>
- 
+
   <main>
- 
+
     <!-- ══ CRÓNICA ══ -->
     <div class="seccion" id="cronica">
       <span class="eyebrow">La historia</span>
       <h2>La paradoja del<br><em>país del hielo</em></h2>
- 
+
       <p>
         Chile es uno de los países con más agua congelada del mundo. Sus glaciares representan aproximadamente
         el <strong>80% de los glaciares de toda Sudamérica</strong>, una cifra que suena a abundancia. Pero
         ese hielo se está derritiendo, y lo está haciendo más rápido de lo que cualquier modelo climático
         anticipaba hace apenas dos décadas.
       </p>
- 
+
       <div class="dato-cards">
         <div class="dato-card">
           <span class="num">26.180</span>
@@ -606,18 +606,18 @@
           <span class="lbl">km³ equivalentes en agua</span>
         </div>
       </div>
- 
+
       <p>
         Entre 2014 y 2022 —apenas ocho años— Chile perdió cerca del <strong>8% de su superficie glaciar
         total</strong>. En números: la superficie pasó de 22.796 km² a 21.012 km², según el Inventario
         Público de Glaciares (IPG 2022) de la Dirección General de Aguas. El volumen cayó de 3.278 km³
         a 3.026 km³. Casi <strong>250 km³ de hielo que simplemente ya no están</strong>.
       </p>
- 
+
       <blockquote>
         <p>"El agua que bebemos mañana existe hoy, congelada en la montaña. Y se está yendo."</p>
       </blockquote>
- 
+
       <p>
         El problema no es solo ambiental. Es político y social. En Chile, los glaciares no son una postal
         de montaña: son infraestructura hídrica. En épocas de sequía, cuando no hay nieve ni lluvia, el agua
@@ -626,12 +626,12 @@
         tiene 18.687 km². El hielo está en el sur. La sed, en el centro.
       </p>
     </div>
- 
+
     <!-- ══ SHOAN ══ -->
     <div class="seccion" id="shoan">
       <span class="eyebrow">El personaje</span>
       <h2>Shoan lo<br><em>cuenta todo</em></h2>
- 
+
       <div class="shoan-escena">
         <div class="shoan-figura"><img src="shoan.png" alt="Shoan el huemul" /></div>
         <div class="shoan-globo">
@@ -639,7 +639,7 @@
           <p>En la lengua de quienes habitaron esta tierra antes que todos nosotros, mi nombre significa algo. Y esta historia también.</p>
         </div>
       </div>
- 
+
       <div class="shoan-escena flip">
         <div class="shoan-figura"><img src="shoan.png" alt="Shoan mirando al horizonte" /></div>
         <div class="shoan-globo">
@@ -649,7 +649,7 @@
           <p style="margin-top:0.7rem;">En ocho años. Lo que tardó <em>miles de años</em> en formarse, desaparece en menos de una década.</p>
         </div>
       </div>
- 
+
       <div class="shoan-escena">
         <div class="shoan-figura"><img src="shoan.png" alt="Shoan preocupado" /></div>
         <div class="shoan-globo">
@@ -657,7 +657,7 @@
           <p>Todo el hielo está al sur. Toda la gente, al norte y al centro. ¿Alguien más ve el problema?</p>
         </div>
       </div>
- 
+
       <div class="shoan-escena flip">
         <div class="shoan-figura"><img src="shoan.png" alt="Shoan esperanzado" /></div>
         <div class="shoan-globo">
@@ -666,40 +666,40 @@
         </div>
       </div>
     </div>
- 
+
     <!-- ══ VISUALIZACIÓN ══ -->
     <div class="seccion" id="visualizacion">
       <span class="eyebrow">Visualización</span>
       <h2>Superficie glaciar<br><em>por macrozona</em></h2>
- 
+
       <p>
         El gráfico muestra la distribución de superficie glaciar por macrozona en Chile, elaborado a partir
         de los datos del IPG 2022. La desproporción entre la Macrozona Austral y el resto del país es el
         dato central de esta historia.
       </p>
- 
+
       <div class="vis-wrap">
         <img
           src="vis_01.jpg"
           alt="Gráfico de barras mostrando la superficie glaciar por macrozona en Chile. La Macrozona Austral domina con 18.687 km², seguida por la Sur con 1.180, la Centro con 911 y la Norte con 234 km²."
-        />
+       />
         <div class="vis-caption">
           Elaboración propia · Inventario Público de Glaciares 2022 (DGA, MOP) · Python + Altair
         </div>
       </div>
- 
+
       <p>
         La Macrozona Austral concentra el <strong>89% de la superficie glaciar del país</strong>. Pero la
         crisis hídrica no golpea en la Patagonia: golpea en el centro y el norte, donde los glaciares son
         más pequeños, más frágiles y más necesarios.
       </p>
     </div>
- 
+
     <!-- ══ PREGUNTAS ══ -->
     <div class="seccion" id="preguntas">
       <span class="eyebrow">Investigación</span>
       <h2>Lo que este<br><em>proyecto pregunta</em></h2>
- 
+
       <ul class="preguntas">
         <li>
           <span class="q-num">1</span>
@@ -723,7 +723,7 @@
         </li>
       </ul>
     </div>
- 
+
     <!-- ══ FUENTES ══ -->
     <div class="fuentes-box" id="fuentes">
       <span class="eyebrow">Referencias</span>
@@ -747,15 +747,15 @@
         </li>
       </ol>
     </div>
- 
+
   </main>
- 
+
   <!-- ══ FOOTER ══ -->
   <footer>
     <p>Pieza narrativa individual · Proyecto Deshielo Glaciar en Chile</p>
     <p>Periodismo de Datos · Universidad Católica de Chile · 2026</p>
     <p><a href="../index.html">← volver a la webstory grupal</a></p>
   </footer>
- 
+
 </body>
 </html>
