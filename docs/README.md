@@ -4,7 +4,7 @@
 
 Esta página web presenta mi pieza narrativa individual dentro de la webstory grupal sobre el deshielo glaciar en Chile. La historia se construye a partir de los datos del **Inventario Público de Glaciares 2022 (IPG 2022)** de la Dirección General de Aguas (DGA), combinando una crónica con voz propia y la visualización desarrollada en la entrega anterior.
 
-**Sitio publicado:** [link de GitHub Pages acá](https://josegallegosg.github.io/pagina-web/)
+**Sitio publicado:** [Click aquí](https://josegallegosg.github.io/tarea-03/)
 
 ---
 
