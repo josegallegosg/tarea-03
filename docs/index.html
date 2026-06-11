@@ -1,330 +1,517 @@
 <!DOCTYPE html>
 <html lang="es">
- 
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="Josefa" />
-  <meta name="description" content="Crónica sobre el retroceso glaciar en Chile y su impacto en la disponibilidad de agua dulce, basada en datos del Inventario Público de Glaciares 2022 de la DGA." />
-  <title> Deshielo glaciar en Chile</title>
- 
+  <meta name="description" content="Shoan, el huemul, cuenta cómo el deshielo glaciar en Chile está destruyendo su hogar. Historia narrada con datos del IPG 2022." />
+  <title>Shoan — Mi hogar se está derritiendo</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:wght@400;700&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
   <style>
+    :root {
+      --hielo:     #EAF4F5;
+      --noche:     #171F3C;
+      --azul-frio: #4F7F9C;
+      --aguamarina:#7EC8C8;
+      --celeste:   #A8D5E2;
+      --blanco:    #ffffff;
+      --texto:     #1a2235;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
-      font-family: Georgia, serif;
-      font-size: 1.1rem;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--hielo);
+      color: var(--texto);
+      font-size: 1rem;
       line-height: 1.75;
-      color: #1a1a1a;
-      background-color: #f7f5f0;
-      margin: 0;
-      padding: 0;
     }
- 
+
+    /* ── HEADER ── */
     header {
-      background-color: #1b3a4b;
-      color: #ffffff;
-      padding: 3rem 2rem 2rem;
+      background: linear-gradient(180deg, var(--noche) 0%, #1e3a5f 100%);
+      color: var(--hielo);
+      padding: 3.5rem 2rem 3rem;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
- 
+
+    header::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 55px;
+      background: var(--hielo);
+      clip-path: ellipse(55% 100% at 50% 100%);
+    }
+
+    .header-etiqueta {
+      display: inline-block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--aguamarina);
+      border: 1px solid var(--aguamarina);
+      padding: 0.25rem 0.85rem;
+      border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+
     header h1 {
-      font-size: 2.4rem;
-      margin: 0 0 0.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 6vw, 3.8rem);
+      font-weight: 900;
+      font-style: italic;
+      color: var(--blanco);
+      line-height: 1.1;
+      max-width: 680px;
+      margin: 0 auto 1rem;
     }
- 
+
+    header h1 em {
+      color: var(--aguamarina);
+      font-style: normal;
+    }
+
     header p.bajada {
-      font-size: 1.1rem;
-      color: #a8d5e2;
-      margin: 0;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.82rem;
+      color: var(--celeste);
+      max-width: 500px;
+      margin: 0 auto;
+      line-height: 1.6;
     }
- 
+
+    /* ── NAV ── */
     nav {
-      background-color: #132d3c;
-      padding: 0.6rem 2rem;
-      text-align: center;
+      background-color: var(--noche);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      padding: 0 1rem 1rem;
     }
- 
+
     nav a {
-      color: #a8d5e2;
+      color: var(--celeste);
       text-decoration: none;
-      margin: 0 1rem;
-      font-family: Arial, sans-serif;
-      font-size: 0.9rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
     }
- 
+
     nav a:hover {
-      text-decoration: underline;
+      border-color: var(--aguamarina);
+      color: var(--blanco);
     }
- 
+
+    /* ── MAIN ── */
     main {
       max-width: 760px;
-      margin: 2.5rem auto;
-      padding: 0 1.5rem;
+      margin: 0 auto;
+      padding: 3rem 1.5rem 5rem;
     }
- 
+
+    /* ── ESCENA: SHOAN + GLOBO ── */
+    .escena {
+      display: flex;
+      align-items: flex-end;
+      gap: 1.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .escena.derecha {
+      flex-direction: row-reverse;
+    }
+
+    .shoan-img {
+      width: 160px;
+      flex-shrink: 0;
+      filter: drop-shadow(0 4px 12px rgba(23,31,60,0.18));
+    }
+
+    .shoan-img img {
+      width: 100%;
+      display: block;
+    }
+
+    /* GLOBO DE TEXTO */
+    .globo {
+      position: relative;
+      background: var(--blanco);
+      border: 2.5px solid var(--noche);
+      border-radius: 18px;
+      padding: 1.2rem 1.4rem;
+      flex: 1;
+      box-shadow: 4px 4px 0 var(--noche);
+    }
+
+    /* cola del globo — izquierda (shoan a la izquierda) */
+    .globo::before {
+      content: "";
+      position: absolute;
+      bottom: 22px;
+      left: -20px;
+      width: 0; height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-right: 20px solid var(--noche);
+    }
+
+    .globo::after {
+      content: "";
+      position: absolute;
+      bottom: 24px;
+      left: -15px;
+      width: 0; height: 0;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-right: 16px solid var(--blanco);
+    }
+
+    /* cola del globo — derecha (shoan a la derecha) */
+    .escena.derecha .globo::before {
+      left: auto;
+      right: -20px;
+      border-right: none;
+      border-left: 20px solid var(--noche);
+    }
+
+    .escena.derecha .globo::after {
+      left: auto;
+      right: -15px;
+      border-right: none;
+      border-left: 16px solid var(--blanco);
+    }
+
+    .globo p {
+      margin: 0;
+      font-size: 0.97rem;
+      color: var(--texto);
+      line-height: 1.65;
+    }
+
+    .globo p + p {
+      margin-top: 0.6rem;
+    }
+
+    .globo strong {
+      color: var(--azul-frio);
+    }
+
+    .globo .dato-grande {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--noche);
+      line-height: 1;
+      margin: 0.4rem 0 0.2rem;
+    }
+
+    .globo .dato-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--azul-frio);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    /* ── DIVISOR ── */
+    .divisor {
+      border: none;
+      border-top: 1px solid var(--celeste);
+      margin: 2.5rem 0;
+      opacity: 0.5;
+    }
+
+    /* ── EYEBROW ── */
+    .eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--azul-frio);
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+
     h2 {
-      font-size: 1.5rem;
-      color: #1b3a4b;
-      border-bottom: 2px solid #a8d5e2;
-      padding-bottom: 0.3rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--noche);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    p { color: #2a3550; margin-bottom: 1rem; }
+    p strong { color: var(--noche); }
+
+    /* ── VISUALIZACIÓN ── */
+    .visualizacion { margin: 2rem 0; }
+
+    .visualizacion img {
+      width: 100%;
+      border-radius: 6px;
+      border: 1px solid var(--celeste);
+    }
+
+    .visualizacion figcaption {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: #6b7b8d;
+      margin-top: 0.6rem;
+      line-height: 1.5;
+    }
+
+    /* ── LISTA PREGUNTAS ── */
+    .preguntas {
+      list-style: none;
+      padding: 0;
+      counter-reset: preg;
+    }
+
+    .preguntas li {
+      counter-increment: preg;
+      display: flex;
+      gap: 1rem;
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--celeste);
+      color: #2a3550;
+      font-size: 0.95rem;
+    }
+
+    .preguntas li::before {
+      content: "0" counter(preg);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      color: var(--azul-frio);
+      min-width: 28px;
+      padding-top: 0.15rem;
+    }
+
+    /* ── FUENTES ── */
+    .fuentes {
+      background: var(--blanco);
+      border: 1px solid var(--celeste);
+      border-radius: 8px;
+      padding: 1.5rem 1.8rem;
       margin-top: 2.5rem;
     }
- 
-    h3 {
-      font-size: 1.1rem;
-      color: #1b3a4b;
-      margin-bottom: 0.4rem;
-    }
- 
-    .datos-clave {
-      background-color: #ddeef5;
-      border-left: 5px solid #1b3a4b;
-      padding: 1.2rem 1.5rem;
-      margin: 2rem 0;
-      border-radius: 0 6px 6px 0;
-    }
- 
-    .datos-clave ul {
-      margin: 0.5rem 0 0;
-      padding-left: 1.2rem;
-    }
- 
-    .datos-clave li {
-      margin-bottom: 0.4rem;
-    }
- 
-    .visualizacion {
-      margin: 2rem 0;
-      text-align: center;
-    }
- 
-    .visualizacion img {
-      max-width: 100%;
-      border: 2px solid #c0d8e4;
-      border-radius: 4px;
-    }
- 
-    .visualizacion figcaption {
-      font-family: Arial, sans-serif;
-      font-size: 0.85rem;
-      color: #555;
-      margin-top: 0.5rem;
-    }
- 
-    blockquote {
-      border-left: 4px solid #1b3a4b;
-      margin: 1.5rem 0;
-      padding: 0.8rem 1.2rem;
-      background-color: #eaf4f8;
-      font-style: italic;
-      color: #333;
-    }
- 
-    .fuentes {
-      background-color: #efefef;
-      padding: 1.2rem 1.5rem;
-      border-radius: 6px;
-      margin-top: 2rem;
-    }
- 
+
     .fuentes ol {
-      padding-left: 1.4rem;
-      margin: 0.5rem 0 0;
+      padding-left: 1.2rem;
+      margin-top: 0.8rem;
     }
- 
+
     .fuentes li {
-      margin-bottom: 0.4rem;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
+      color: #6b7b8d;
+      margin-bottom: 0.5rem;
     }
- 
+
+    .fuentes a {
+      color: var(--azul-frio);
+      text-decoration: none;
+    }
+
+    .fuentes a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
     footer {
-      background-color: #1b3a4b;
-      color: #a8d5e2;
+      background-color: var(--noche);
+      color: var(--celeste);
       text-align: center;
-      padding: 1.5rem;
-      font-family: Arial, sans-serif;
-      font-size: 0.85rem;
-      margin-top: 3rem;
+      padding: 2rem 1.5rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      line-height: 2;
     }
- 
-    footer a {
-      color: #a8d5e2;
+
+    footer a { color: var(--aguamarina); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 560px) {
+      .escena, .escena.derecha {
+        flex-direction: column;
+        align-items: center;
+      }
+      .shoan-img { width: 120px; }
+      .globo::before, .globo::after,
+      .escena.derecha .globo::before,
+      .escena.derecha .globo::after {
+        display: none;
+      }
     }
   </style>
 </head>
- 
+
 <body>
- 
+
+  <!-- HEADER -->
   <header>
-    <h1>PÉRDIDA DE GLACIARES</h1>
-    <p class="bajada">Cómo Chile está perdiendo sus glaciares y con ellos, el agua del futuro</p>
+    <div class="header-etiqueta">Periodismo de Datos · IPG 2022 · UC</div>
+    <h1>"Mi hogar se está<br><em>derritiendo</em>"</h1>
+    <p class="bajada">Shoan, el huemul, cuenta en primera persona<br>cómo el deshielo glaciar está destruyendo su mundo.</p>
   </header>
- 
+
+  <!-- NAV -->
   <nav>
-    <a href="#cronica">Crónica</a>
+    <a href="#historia">Historia</a>
     <a href="#datos">Datos</a>
     <a href="#visualizacion">Visualización</a>
     <a href="#fuentes">Fuentes</a>
   </nav>
- 
+
   <main>
- 
-    <div id="cronica">
-      <h2>La paradoja del país del hielo</h2>
- 
+
+    <!-- ESCENA 1 -->
+    <section id="historia">
+      <div class="escena">
+        <div class="shoan-img"><img src="shoan.png" alt="Shoan, el huemul protagonista de la webstory" /></div>
+        <div class="globo">
+          <p>Hola. Me llamo <strong>Shoan</strong>. Soy un huemul y nací entre glaciares, en la cordillera de Chile. Durante miles de años, mi familia vivió rodeada de hielo. Pero algo está pasando. El hielo... está desapareciendo.</p>
+        </div>
+      </div>
+
+      <!-- ESCENA 2 -->
+      <div class="escena derecha">
+        <div class="shoan-img"><img src="shoan.png" alt="Shoan mirando hacia el horizonte" /></div>
+        <div class="globo">
+          <p>¿Sabían que Chile tiene el <strong>80% de los glaciares de toda Sudamérica</strong>? Mi país es uno de los más ricos en hielo del mundo. Y aun así, el agua escasea. Yo no lo entiendo del todo... pero los datos sí.</p>
+          <span class="dato-grande">80%</span>
+          <span class="dato-label">de los glaciares de Sudamérica están en Chile</span>
+        </div>
+      </div>
+
+      <!-- ESCENA 3 -->
+      <div class="escena">
+        <div class="shoan-img"><img src="shoan.png" alt="Shoan con cara triste" /></div>
+        <div class="globo">
+          <p>Entre 2014 y 2022 —apenas ocho años— Chile perdió cerca del <strong>8% de su superficie glaciar</strong>. Eso son casi <strong>1.800 km²</strong> de hielo que ya no existen. Mi hogar se encoge cada año y nadie lo detiene.</p>
+          <span class="dato-grande">−8%</span>
+          <span class="dato-label">de superficie glaciar perdida en solo 8 años</span>
+        </div>
+      </div>
+
+      <!-- ESCENA 4 -->
+      <div class="escena derecha">
+        <div class="shoan-img"><img src="shoan.png" alt="Shoan señalando el mapa" /></div>
+        <div class="globo">
+          <p>Lo más injusto es esto: el agua glaciar está <strong>en el sur</strong>, donde llueve y sobra. Pero la crisis hídrica está <strong>en el centro</strong>, donde vive la mayoría de las personas. La Macrozona Centro tiene apenas <strong>911 km²</strong> de glaciares. La Austral tiene 18.687 km².</p>
+        </div>
+      </div>
+
+      <!-- ESCENA 5 -->
+      <div class="escena">
+        <div class="shoan-img"><img src="shoan.png" alt="Shoan preocupado" /></div>
+        <div class="globo">
+          <p>En total, en Chile hay <strong>26.180 glaciares</strong> registrados. Guardan el equivalente a <strong>2.573 km³ de agua</strong>. Suena a mucho. Pero ese número baja cada año. Y cuando no hay nieve ni lluvia, esos glaciares son la <strong>única fuente de agua</strong> que le queda a los ríos.</p>
+          <span class="dato-grande">26.180</span>
+          <span class="dato-label">glaciares — pero cada vez menos</span>
+        </div>
+      </div>
+
+      <!-- ESCENA 6 -->
+      <div class="escena derecha">
+        <div class="shoan-img"><img src="shoan.png" alt="Shoan mirando al futuro" /></div>
+        <div class="globo">
+          <p>Yo solo quiero que mi hogar siga existiendo. Que el hielo no desaparezca antes de que alguien decida protegerlo. Chile lleva años discutiendo una <strong>Ley de Glaciares</strong> que aún no existe. Mientras tanto, yo espero. Y el hielo... sigue derritiéndose.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divisor" />
+
+    <!-- VISUALIZACIÓN -->
+    <section id="datos">
+      <span class="eyebrow">Los datos detrás de la historia</span>
+      <h2>Top 10 cuencas con más agua glaciar</h2>
+
       <p>
-        Chile es uno de los países con más agua congelada del mundo. Sus glaciares representan aproximadamente el
-        <strong>80% de los glaciares de toda Sudamérica</strong>, una cifra que suena a abundancia. Pero ese hielo
-        se está derritiendo, y lo está haciendo más rápido de lo que cualquier modelo climático anticipaba hace
-        apenas dos décadas.
+        El gráfico muestra las diez cuencas hidrográficas con mayor volumen de agua glaciar equivalente en Chile,
+        según el <strong>IPG 2022</strong> de la DGA. Todas están en el extremo sur del país.
       </p>
- 
+
+      <div id="visualizacion" class="visualizacion">
+        <figure>
+          <img
+            src="vis03.jpg"
+            alt="Gráfico de barras horizontales mostrando las 10 cuencas con mayores reservas de agua glaciar en Chile según el IPG 2022. La cuenca costera entre Límite Región y Seno Andrew lidera con 741 km³."
+          />
+          <figcaption>
+            Elaboración propia a partir del Inventario Público de Glaciares 2022 (DGA, MOP).
+            Herramienta: Python + Altair. Datos: IPG2022_limpio.csv.
+          </figcaption>
+        </figure>
+      </div>
+
       <p>
-        Cuando escucho hablar de glaciares, imagino algo permanente. Masas de hielo que llevan miles de años
-        ahí, indiferentes al tiempo. Pero los datos cuentan otra historia. El Inventario Público de Glaciares
-        (IPG) de la Dirección General de Aguas registró en 2022 un total de <strong>26.180 glaciares</strong>
-        en territorio nacional, con una superficie total de <strong>21.012 km²</strong>. Comparado con el
-        inventario de 2014 —que medía 22.796 km²— la pérdida es de casi <strong>1.800 km²</strong>: un 8%
-        del total en apenas ocho años.
+        La cuenca con más reservas acumula <strong>741 km³</strong> de agua equivalente. La segunda, 614 km³.
+        Ambas están en la Patagonia, a miles de kilómetros de las zonas con mayor demanda hídrica.
+        La paradoja geográfica del agua glaciar chilena es el corazón de esta historia.
       </p>
- 
-      <p>
-        No es un porcentaje que impresione a primera vista. Pero detrás de ese número hay ecosistemas
-        fragmentados, cuencas que pierden su regulación hídrica y comunidades que ya empiezan a sentir que
-        el agua escasea. El volumen de hielo estimado en el IPG 2022 es de <strong>3.026 km³</strong>,
-        equivalente a <strong>2.573 km³ de agua</strong>. Una reserva enorme, pero que lleva años reduciéndose.
-      </p>
-    </div>
- 
-    <div id="datos" class="datos-clave">
-      <h3>Datos clave: Inventario Público de Glaciares 2022 (DGA)</h3>
-      <ul>
-        <li>Chile concentra ~80% de los glaciares de Sudamérica</li>
-        <li><strong>26.180 glaciares</strong> registrados en el inventario 2022</li>
-        <li>Superficie total: <strong>21.012 km²</strong> (vs. 22.796 km² en 2014)</li>
-        <li>Pérdida de superficie: <strong>~8%</strong> entre 2014 y 2022</li>
-        <li>Volumen de hielo estimado: <strong>3.026 km³</strong> (equiv. a 2.573 km³ de agua)</li>
-        <li>Región con más hielo: <strong>Magallanes</strong> (10.427 km²)</li>
-        <li>La <strong>Macrozona Austral</strong> concentra el 89% de la superficie glaciar del país</li>
-        <li>En épocas de sequía, los glaciares aportan cerca del <strong>70% del agua</strong> consumida en algunas zonas</li>
-      </ul>
-    </div>
- 
-    <p>
-      La distribución del hielo en Chile no es pareja. Como muestra la visualización más abajo, la
-      <strong>Macrozona Austral</strong> concentra 18.687 km² de los 21.012 km² totales: casi el 89%
-      del hielo del país está en el extremo sur. Pero la crisis hídrica no golpea en el sur, donde
-      llueve y hay agua de sobra. Golpea en el centro y el norte, precisamente donde los glaciares son
-      más pequeños, más frágiles y más necesarios.
-    </p>
- 
-    <p>
-      La <strong>Macrozona Centro</strong> —que incluye la Región Metropolitana y las regiones vecinas—
-      tiene apenas 911 km² de superficie glaciar. Es la zona más poblada del país y la que más
-      depende del agua de montaña. En épocas de sequía, cuando no hay nieve ni lluvia, el deshielo es
-      la única fuente que mantiene vivos a los ríos.
-    </p>
- 
-    <blockquote>
-      "Glaciares que tardaron miles de años en formarse se han fragmentado y retrocedido en cuestión de años."
-      — Angloamerican, sobre el ritmo de deshielo desde el año 2000.
-    </blockquote>
- 
-    <p>
-      El tipo de glaciar también importa. El IPG 2022 clasifica los cuerpos de hielo siguiendo la norma
-      UNESCO: la categoría más numerosa es el <strong>glaciarete</strong>, con 18.211 unidades. Son los
-      más pequeños y también los más vulnerables al calentamiento. Los glaciares de montaña suman 3.844,
-      y los glaciares rocosos —cubiertos por detritos— son 3.598. Cada tipo responde de forma distinta
-      al cambio de temperatura, pero todos comparten la misma tendencia: están retrocediendo.
-    </p>
- 
-    <div id="visualizacion" class="visualizacion">
-      <figure>
-        <img
-          src="vis_01.jpg"
-          alt="Gráfico de barras horizontales que muestra la superficie glaciar total por macrozona en Chile. La Macrozona Austral domina con cerca de 18.700 km², seguida muy por debajo por las macrozonas Sur, Centro y Norte."
-        />
-        <figcaption>
-          <strong>Superficie glaciar por macrozona en Chile</strong> — Elaboración propia a partir del
-          Inventario Público de Glaciares 2022 (DGA, MOP). La desproporción entre la Macrozona Austral
-          y el resto del país refleja dónde está el hielo, no necesariamente dónde más se necesita.
-        </figcaption>
-      </figure>
-    </div>
- 
-    <p>
-      El gráfico lo dice con claridad: el hielo está en el sur, pero la sed está en el centro. Esa
-      distancia geográfica entre la reserva y la necesidad es parte del problema. Los glaciares de la
-      zona central no solo son pequeños, sino que además están sometidos a las temperaturas más altas
-      del ciclo anual y a una megasequía que lleva más de una década instalada en Chile central.
-    </p>
- 
-    <h2>¿Qué podemos hacer con esta información?</h2>
- 
-    <p>
-      La historia de los glaciares chilenos no termina en un gráfico. Termina —o debería empezar— en
-      política pública, en regulación, en decisiones concretas sobre cómo protegemos lo que queda.
-      Chile lleva años debatiendo una ley de glaciares que aún no existe. Mientras tanto, el hielo
-      sigue su camino.
-    </p>
- 
-    <p>
-      Este proyecto es una primera aproximación a esa historia. Usamos los datos del IPG 2022 para
-      mostrar dónde estamos parados. Lo que sigue es entender, con más detalle, qué regiones están
-      en mayor riesgo y qué comunidades ya están sintiendo las consecuencias.
-    </p>
- 
-    <h2>Preguntas que guían esta investigación</h2>
- 
-    <ol>
-      <li>¿Cuánto han disminuido los glaciares en Chile en los últimos años?</li>
-      <li>¿Qué zonas del país están más afectadas?</li>
-      <li>¿Cómo se relaciona el deshielo con la crisis hídrica?</li>
-      <li>¿Qué regiones dependen más del agua proveniente de glaciares?</li>
-      <li>¿Qué podría pasar si esta tendencia continúa?</li>
-    </ol>
- 
+    </section>
+
+    <hr class="divisor" />
+
+    <!-- PREGUNTAS -->
+    <section>
+      <span class="eyebrow">Investigación</span>
+      <h2>Preguntas que guían este proyecto</h2>
+      <ol class="preguntas">
+        <li>¿Cuánto han disminuido los glaciares en Chile en los últimos años?</li>
+        <li>¿Qué zonas del país están más afectadas por el retroceso glaciar?</li>
+        <li>¿Cómo se relaciona la distribución del agua glaciar con la crisis hídrica?</li>
+        <li>¿Qué regiones dependen más del agua glaciar para consumo humano?</li>
+        <li>¿Qué podría pasar si la tendencia de deshielo continúa al ritmo actual?</li>
+      </ol>
+    </section>
+
+    <!-- FUENTES -->
     <div id="fuentes" class="fuentes">
-      <h2>Fuentes</h2>
+      <span class="eyebrow">Referencias</span>
+      <h2 style="font-size:1.2rem; margin-bottom:0.2rem;">Fuentes</h2>
       <ol>
         <li>
           Dirección General de Aguas (DGA) — Inventario Público de Glaciares 2022:
-          <a href="https://dga.mop.gob.cl/inventario-publico-de-glaciares-actualizacion-2022/" target="_blank" rel="noopener">
-            dga.mop.gob.cl
-          </a>
+          <a href="https://dga.mop.gob.cl/inventario-publico-de-glaciares-actualizacion-2022/" target="_blank" rel="noopener">dga.mop.gob.cl</a>
         </li>
         <li>
-          Fundación Glaciares Chilenos — Análisis del IPG 2022:
-          <a href="https://www.glaciareschilenos.org/reportajes/glaciares-chilenos-en-evolucion-analisis-del-inventario-publico-de-glaciares-2022/" target="_blank" rel="noopener">
-            glaciareschilenos.org
-          </a>
+          Fundación Glaciares Chilenos — Análisis IPG 2022:
+          <a href="https://www.glaciareschilenos.org/reportajes/glaciares-chilenos-en-evolucion-analisis-del-inventario-publico-de-glaciares-2022/" target="_blank" rel="noopener">glaciareschilenos.org</a>
         </li>
         <li>
           Portal Agro Chile — Nota oficial DGA:
-          <a href="https://www.portalagrochile.cl/2022/06/16/direccion-general-de-aguas-del-mop-registro-26-169-glaciares-en-su-inventario-publico-2022/" target="_blank" rel="noopener">
-            portalagrochile.cl
-          </a>
+          <a href="https://www.portalagrochile.cl/2022/06/16/direccion-general-de-aguas-del-mop-registro-26-169-glaciares-en-su-inventario-publico-2022/" target="_blank" rel="noopener">portalagrochile.cl</a>
         </li>
         <li>
           Wikipedia — Inventario Público de Glaciares de Chile 2022:
-          <a href="https://es.wikipedia.org/wiki/Inventario_p%C3%BAblico_de_glaciares_de_Chile_2022" target="_blank" rel="noopener">
-            es.wikipedia.org
-          </a>
+          <a href="https://es.wikipedia.org/wiki/Inventario_p%C3%BAblico_de_glaciares_de_Chile_2022" target="_blank" rel="noopener">es.wikipedia.org</a>
         </li>
       </ol>
     </div>
- 
+
   </main>
- 
+
+  <!-- FOOTER -->
   <footer>
-    <p>
-      Pieza narrativa individual · Proyecto Deshielo Glaciar en Chile ·
-      Periodismo de Datos, Universidad Católica de Chile
-    </p>
-    <p>
-      Parte de la webstory grupal —
-      <a href="../index.html">volver al inicio</a>
-    </p>
+    <p>Pieza narrativa individual · Proyecto Deshielo Glaciar en Chile</p>
+    <p>Periodismo de Datos · Universidad Católica de Chile · 2026</p>
+    <p><a href="../index.html">← volver a la webstory grupal</a></p>
   </footer>
- 
+
 </body>
 </html>
