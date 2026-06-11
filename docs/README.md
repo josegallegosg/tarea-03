@@ -1,8 +1,8 @@
-# Tarea 03 — Pieza narrativa individual en HTML
+# Tarea 03 — Narrativa individual en HTML
 
 ## Descripción
 
-Esta página web presenta mi pieza narrativa individual dentro de la webstory grupal sobre el deshielo glaciar en Chile. La historia se construye a partir de los datos del **Inventario Público de Glaciares 2022 (IPG 2022)** de la Dirección General de Aguas (DGA), combinando una crónica con voz propia y la visualización desarrollada en la entrega anterior.
+Esta página web presenta mi propuesta narrativa individual dentro de la webstory grupal sobre el deshielo glaciar en Chile. La historia se construye a partir de los datos del **Inventario Público de Glaciares 2022 (IPG 2022)** de la Dirección General de Aguas (DGA), combinando una crónica con voz propia y la visualización desarrollada en la entrega anterior.
 
 **Sitio publicado:** [Click aquí](https://josegallegosg.github.io/tarea-03/)
 
@@ -20,15 +20,15 @@ Esta página web presenta mi pieza narrativa individual dentro de la webstory gr
 
 ## Proceso
 
-Lo primero que hice fue revisar los datos que ya tenía de la entrega anterior: la ficha técnica del IPG 2022 y la visualización en Altair. A partir de eso, definí qué historia quería contar con mi pieza individual: la paradoja de que Chile tiene el 80% de los glaciares de Sudamérica pero enfrenta una crisis hídrica creciente, especialmente en la zona central.
+Lo primero que hice fue revisar los datos que ya tenía de la entrega anterior: la ficha técnica del IPG 2022 y la visualización en Altair. A partir de eso, definí qué historia quería contar: la paradoja de que Chile tiene el 80% de los glaciares de Sudamérica pero enfrenta una crisis hídrica creciente, especialmente en la zona central.
 
-Para estructurar el HTML, empecé por decidir qué secciones tendría la página antes de escribir una sola línea de código: encabezado, navegación, crónica, bloque de datos, visualización y fuentes. Eso me ayudó a tener claro qué etiquetas necesitaba usar.
+Para estructurar el HTML, empecé por dibujar en un cuaderno qué secciones tendría la página antes de escribir el código: encabezado, navegación, crónica, bloque de datos, visualización y fuentes. Eso me ayudó a tener claro qué etiquetas necesitaba usar.
 
-Traté de que la crónica tuviera un tono mixto: datos concretos del inventario (superficie, volumen, distribución por macrozona) combinados con una voz más personal que conectara esos números con el problema real. Me interesaba especialmente la idea de que el hielo está en el sur pero la crisis está en el centro, porque eso no siempre queda claro cuando se habla de glaciares en términos generales.
+Traté de que la crónica tuviera un tono mixto: datos concretos del inventario (superficie, volumen, distribución por macrozona) combinados con una voz más personal de Shoan (el huemul) que conectara esos números con el problema real. 
 
 En cuanto al HTML, usé las etiquetas vistas en clases (`<header>`, `<footer>`, `<nav>`, `<main>`, `<div>`, `<figure>`, `<blockquote>`, listas ordenadas y no ordenadas) y agregué algunos elementos que busqué por mi cuenta, como el atributo `rel="noopener"` en los links externos y el uso de `<figcaption>` para describir la imagen.
 
-El CSS lo mantuve simple y funcional, sin intentar hacer algo complejo que distrajera del contenido.
+El CSS hice lo más interactivo y atractivo posible para poder mantener a la audiencia interesada en un tema tan complejo como este.
 
 ---
 
